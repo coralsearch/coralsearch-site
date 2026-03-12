@@ -1,0 +1,203 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* CSS Custom Properties */
+:root {
+  --color-primary: #E8451E;
+  --color-secondary: #1A2E44;
+  --color-background-light: #F4F7FB;
+  --color-white: #FFFFFF;
+  --color-dark-text: #1A2E44;
+
+  --font-family-body: 'Inter', sans-serif;
+  --font-family-headings: 'Poppins', sans-serif;
+
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+
+  --border-radius-4: 4px;
+  --border-radius-8: 8px;
+  --border-radius-16: 16px;
+  --border-radius-999: 999px;
+
+  --box-shadow-soft: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Base Typography Styles */
+body {
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-dark-text);
+  background-color: var(--color-background-light);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family-headings);
+  color: var(--color-dark-text);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: var(--spacing-16);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-16);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-16) var(--spacing-32);
+  border-radius: var(--border-radius-8);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-family: var(--font-family-headings);
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #cc3a18;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-16) var(--spacing-32);
+  border-radius: var(--border-radius-8);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-family: var(--font-family-headings);
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: #142436;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: var(--spacing-16) var(--spacing-32);
+  border-radius: var(--border-radius-8);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  font-family: var(--font-family-headings);
+  font-weight: 500;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Class */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-8);
+  box-shadow: var(--box-shadow-soft);
+  padding: var(--spacing-24);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--box-shadow-medium);
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  .section-padding {
+    padding: 40px 0;
+  }
+}
