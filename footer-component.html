@@ -1,0 +1,166 @@
+<style>
+  .site-footer {
+    background-color: #1A2E44;
+    color: #FFFFFF;
+    padding: 60px 0 30px;
+    font-family: "Inter", sans-serif;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .footer-grid h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-grid ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-grid ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-grid ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-grid ul li a:hover {
+    color: #E8451E;
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-bottom > * {
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer-bottom a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.2s ease;
+  }
+
+  .footer-bottom a:hover {
+    color: #E8451E;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.2s ease;
+  }
+
+  .social-icons a:hover {
+    transform: translateY(-3px);
+  }
+
+  .social-icons svg {
+    fill: #FFFFFF;
+  }
+
+  .contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .contact-info svg {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    fill: #FFFFFF;
+  }
+</style>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h2 style="color: #E8451E; font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 24px;">CoralSearch</h2>
+      <p>Connecting Talent with Opportunity</p>
+      <p>A premium recruitment agency specialising in mid to senior level placements across multiple industries.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m0-2H5a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4z"/><path d="M8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM12 16v-5H9v5h3zm4 0v-3c0-.53.22-.79.65-.79a.84.84 0 0 1 .73.79v3h3V9h-3v1c0-.56-.22-.79-.65-.79a.84.84 0 0 1-.73.79v5h-3z"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.664-1.485 2.033-2.53-.936.555-1.956.959-3.026 1.175-.884-.945-2.164-1.542-3.59-1.542-2.672 0-4.867 2.195-4.867 4.866 0 .38.044.746.124 1.094-4.04-203-7.625-2.135-10.034-1.06.33 578.512 1.674 2.14 4.218 4.421 2.224 4.522 4.694 5.834-1.037-.031-2.008-.317-2.783-.643 0 0 0 0 0 0 .393 4.92 1.36 6.466 3.382-1.169-.023-2.258-.429-3.234-.877.324 1.017 1.26 1.754 2.366 1.773-.957.754-2.175 1.163-3.48 1.163-.223 0-.443-.013-.662-.039 1.215.98 2.67 1.551 4.287 1.551 5.144 0 7.953-4.256 7.953-7.954 0-.121-.234-.241-.34-.367.49-.355.916-.793 1.249-1.293z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M9.197 21.5h4v-8.01h1.797l.303-2.99h-2.1V8.5a.5.5 0 0 1 .5-.5h1.5v-2.99h-2.147A5.417 5.417 0 0 0 4.5 12.56v2.94h-2.343V21.5h4.84z"/></svg></a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Get In Touch</h3>
+      <div class="contact-info">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="mailto:hello@coralsearch.com">hello@coralsearch.com</a>
+      </div>
+      <div class="contact-info">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M20 22h-2v-2c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v2H4v-2c0-2.21 1.79-4 4-4h8c2.21 0 4 1.79 4 4v2zm-8-8c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-2c1.65 0 3-1.35 3-3s-1.35-3-3-3-3 1.35-3 3 1.35 3 3 3z"/></svg>
+        <span>+44 20 0000 0000</span>
+      </div>
+      <div class="contact-info">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span>London, United Kingdom</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; <span id="footer-year"></span> CoralSearch</span>
+    <div>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
