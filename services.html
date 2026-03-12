@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | CoralSearch Executive Search</title>
+  <meta name="description" content="CoralSearch offers executive search, retained search, RPO, outplacement and more — comprehensive talent solutions for global organizations.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Page Hero Styles */
+    .page-hero {
+      background-color: #F4F7FB;
+      padding-top: 140px;
+      padding-bottom: 80px;
+      text-align: center;
+    }
+
+    .page-hero-breadcrumb {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 {
+      font-size: 56px;
+      font-weight: 800;
+      color: #1A2E44;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Services Section */
+    .services-section {
+      background-color: #fff;
+      padding: 80px 0;
+    }
+
+    .services-label {
+      color: #E8451E;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-bottom: 30px;
+      display: block;
+    }
+
+    .services-label::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #E8451E;
+      margin-top: 5px;
+    }
+
+    .core-services-grid {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .additional-services-grid {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .value-added-services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .service-card {
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 32px;
+      transition: border-left 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .service-card:hover {
+      border-left: 3px solid #E8451E;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transform: translateY(-4px);
+    }
+
+    .service-card-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+    }
+
+    .service-card-icon.coral {
+      background-color: #E8451E;
+    }
+
+    .service-card-icon.navy {
+      background-color: #1A2E44;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1A2E44;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .service-card li {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .service-card li::before {
+      content: "✓";
+      color: #E8451E;
+      position: absolute;
+      left: 0;
+    }
+
+    .service-card a {
+      color: #E8451E;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .service-card a:hover {
+      color: #1A2E44;
+    }
+
+    /* Our Process Section */
+    .our-process-section {
+      background-color: #F4F7FB;
+      padding: 80px 0;
+    }
+
+    .our-process-label {
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .our-process-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1A2E44;
+      margin-bottom: 40px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .process-timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .process-step {
+      text-align: center;
+    }
+
+    .process-step-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #E8451E;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .process-step h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1A2E44;
+      margin-bottom: 5px;
+    }
+
+    .process-step p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .process-timeline::before {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 2px;
+      border-top: 2px dashed #ccc;
+    }
+
+    /* Expertise Areas Section */
+    .expertise-areas-section {
+      background-color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .expertise-areas-label {
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .expertise-areas-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1A2E44;
+      margin-bottom: 40px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .expertise-areas-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .expertise-tag {
+      background-color: #fff;
+      border: 1px solid #E8451E;
+      color: #E8451E;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .expertise-tag:hover {
+      background-color: #E8451E;
+      color: #fff;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background-color: #F4F7FB;
+      padding: 80px 0;
+    }
+
+    .faq-label {
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .faq-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1A2E44;
+      margin-bottom: 40px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .faq-item {
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      overflow: hidden;
+      transition: height 0.3s ease;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #1A2E44;
+      cursor: pointer;
+    }
+
+    .faq-icon {
+      font-size: 20px;
+      color: #1A2E44;
+    }
+
+    .faq-answer {
+      font-size: 15px;
+      color: #666;
+      padding: 0 20px 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background-color: #E8451E;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .cta-section p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .cta-section a {
+      background-color: #fff;
+      color: #E8451E;
+      padding: 14px 32px;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .cta-section a:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Footer Styles */
+    .site-footer {
+      background-color: #1A2E44;
+      color: #fff;
+      padding: 80px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .footer-col h3 {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-col a:hover {
+      color: #E8451E;
+    }
+
+    .footer-col p {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-col .contact-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .footer-col .contact-info svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      fill: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-bottom a:hover {
+      color: #E8451E;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .social-icons a {
+      margin-left: 15px;
+      color: #fff;
+      transition: color 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      color: #E8451E;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .core-services-grid,
+      .additional-services-grid {
+        flex-direction: column;
+      }
+
+      .value-added-services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-timeline {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .process-timeline::before {
+        display: none;
+      }
+
+      .process-step {
+        margin-bottom: 40px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .social-icons {
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      Coral<span>Search</span>
+    </a>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Hire Talent</a>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero-breadcrumb">Home → Services</p>
+      <h1>Comprehensive Talent Solutions<br>for Global Organizations.</h1>
+      <p>We provide strategic and innovative hiring solutions across various functions, keeping our clients ahead of the competition.</p>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="container">
+      <span class="services-label">SERVICES</span>
+      <div class="core-services-grid">
+        <div class="service-card">
+          <div class="service-card-icon coral"></div>
+          <h3>Recruitment & Selection</h3>
+          <p>Comprehensive end-to-end recruitment solutions for diverse organizational needs across all industry verticals.</p>
+          <ul>
+            <li>End-to-end hiring management</li>
+            <li>Multi-stage candidate screening</li>
+            <li>Industry-specific sourcing</li>
+            <li>Dedicated account manager</li>
+          </ul>
+          <a href="#">Learn More →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon navy"></div>
+          <h3>Retained Search</h3>
+          <p>Exclusive and dedicated search process for high-impact leadership roles requiring discretion and precision.</p>
+          <ul>
+            <li>Exclusive engagement model</li>
+            <li>C-suite & VP specialization</li>
+            <li>Confidential search process</li>
+            <li>6-month placement guarantee</li>
+          </ul>
+          <a href="#">Learn More →</a>
+        </div>
+      </div>
+
+      <span class="services-label">ADDITIONAL SERVICES</span>
+      <div class="additional-services-grid">
+        <div class="service-card">
+          <p>Market-driven compensation insights to help you stay competitive in your industry and attract top talent.</p>
+        </div>
+        <div class="service-card">
+          <p>Rigorous verification process to ensure candidate integrity and full performance history validation.</p>
+        </div>
+        <div class="service-card">
+          <p>Supporting smooth onboarding and integration of new hires into your organization's culture.</p>
+        </div>
+      </div>
+
+      <span class="services-label">VALUE ADDED SERVICES</span>
+      <div class="value-added-services-grid">
+        <div class="service-card">
+          <p>Strategic analysis of competitor structures and talent distribution to inform your hiring strategy.</p>
+        </div>
+        <div class="service-card">
+          <p>End-to-end management of large-scale recruitment initiatives from planning to successful placement.</p>
+        </div>
+        <div class="service-card">
+          <p>Compassionate support for transitioning employees during organizational restructuring processes.</p>
+        </div>
+        <div class="service-card">
+          <p>Optimizing your internal hiring functions through expert external recruitment process management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-process-section">
+    <div class="container">
+      <p class="our-process-label">How We Work</p>
+      <h2 style="font-family: 'Poppins', sans-serif;">Our Proven Search Process</h2>
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="process-step-icon">1</div>
+          <h3>Understand</h3>
+          <p>Deep dive into your organization, culture, and exact requirements.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-icon">2</div>
+          <h3>Source</h3>
+          <p>Leverage our network, database, and innovative sourcing channels.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-icon">3</div>
+          <h3>Screen</h3>
+          <p>Rigorous multi-stage evaluation of candidates against your criteria.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-icon">4</div>
+          <h3>Present</h3>
+          <p>Deliver a shortlist of only the best 3-5 matched candidates.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-icon">5</div>
+          <h3>Place & Support</h3>
+          <p>Facilitate offer, onboarding, and post-placement follow-up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="expertise-areas-section">
+    <div class="container">
+      <p class="expertise-areas-label">Our Expertise</p>
+      <h2 style="font-family: 'Poppins', sans-serif;">Functions We Specialize In</h2>
+      <div class="expertise-areas-tags">
+        <span class="expertise-tag">Digital Product Management</span>
+        <span class="expertise-tag">Data Sciences & Analytics</span>
+        <span class="expertise-tag">RPA & Automation</span>
+        <span class="expertise-tag">Cloud Architecture</span>
+        <span class="expertise-tag">Infrastructure Management</span>
+        <span class="expertise-tag">Program Management</span>
+        <span class="expertise-tag">SEO Specialists</span>
+        <span class="expertise-tag">UX/UI Design</span>
+        <span class="expertise-tag">Finance Leadership</span>
+        <span class="expertise-tag">Strategy & Transformation</span>
+        <span class="expertise-tag">Sales & Marketing</span>
+        <span class="expertise-tag">Supply Chain Management</span>
+        <span class="expertise-tag">Human Resources</span>
+        <span class="expertise-tag">R&D Leadership</span>
+        <span class="expertise-tag">Market Research</span>
+        <span class="expertise-tag">Packaging</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <p class="faq-label">Common Questions</p>
+      <h2 style="font-family: 'Poppins', sans-serif;">Frequently Asked Questions</h2>
+      <div class="faq-items">
+        <div class="faq-item">
+          <div class="faq-question">
+            How long does the search process take?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Timelines vary by role complexity. Typically, our executive search process takes 3-6 weeks from briefing to shortlist. Retained searches for C-suite roles may take 6-10 weeks to ensure the perfect fit.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What industries do you specialize in?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            We specialize across all major industry verticals including IT & Digital, Finance & Strategy, Sales & Marketing, Supply Chain, Human Resources, and R&D. Our team has deep domain expertise in each area.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What makes CoralSearch different?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            We build decade-long relationships with our clients. Unlike transactional recruiters, we become strategic partners — understanding your culture, goals, and talent needs at a deeper level. Our 98% client retention rate speaks for itself.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you offer a placement guarantee?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes. For retained search engagements, we offer a 6-month replacement guarantee. For permanent recruitment, we offer a 3-month guarantee. We stand behind every placement we make.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            How do you screen candidates?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Our screening process includes initial competency assessment, in-depth interviews, formal reference checking, and where required, psychometric evaluation. We present only candidates who meet all your stated requirements.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you work with international organizations?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes. CoralSearch works with global organizations placing talent across geographies. Our network spans multiple countries and we have experience managing cross-border executive searches.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 style="font-family: 'Poppins', sans-serif;">Ready to Start Your Search?</h2>
+      <p>Talk to our recruitment specialists today — no commitment required.</p>
+      <a href="contact.html">Get In Touch</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 style="color: #fff;">
+            Coral<span style="color: #E8451E;">Search</span>
+          </h3>
+          <p style="color: rgba(255, 255, 255, 0.6);">Connecting Global Vision with Elite Talent</p>
+          <div class="social-icons">
+            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m0-2H5a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4z"/><path d="M8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM12 16v-5H9v5h3zm4 0v-3c0-.53.22-.79.65-.79a.84.84 0 0 1 .73.79v3h3V9h-3v1c0-.56-.22-.79-.65-.79a.84.84 0 0 1-.73.79v5h-3z"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.664-1.485 2.033-2.53-.936.555-1.956.959-3.026 1.175-.884-.945-2.164-1.542-3.59-1.542-2.672 0-4.867 2.195-4.867 4.866 0 .38.044.746.124 1.094-4.04-203-7.625-2.135-10.034-1.06.33 578.512 1.674 2.14 4.218 4.421 2.224 4.522 4.694 5.834-1.037-.031-2.008-.317-2.783-.643 0 0 0 0 0 0 .393 4.92 1.36 6.466 3.382-1.169-.023-2.258-.429-3.234-.877.324 1.017 1.26 1.754 2.366 1.773-.957.754-2.175 1.163-3.48 1.163-.223 0-.443-.013-.662-.039 1.215.98 2.67 1.551 4.287 1.551 5.144 0 7.953-4.256 7.953-7.954 0-.121-.234-.241-.34-.367.49-.355.916-.793 1.249-1.293z"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M9.197 21.5h4v-8.01h1.797l.303-2.99h-2.1V8.5a.5.5 0 0 1 .5-.5h1.5v-2.99h-2.147A5.417 5.417 0 0 0 4.5 12.56v2.94h-2.343V21.5h4.84z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Executive Search</a></li>
+            <li><a href="#">Retained Search</a></li>
+            <li><a href="#">RPO Services</a></li>
+            <li><a href="#">Outplacement</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Get In Touch</h3>
+          <p class="contact-info">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:info@coralsearch.com">info@coralsearch.com</a>
+          </p>
+          <p class="contact-info">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.57 3.9 4.9 6.61 6.35 1.22.6 2.74.54 3.9-.16l2.26-1.48c.53-.35.85-.92.85-1.54V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v4.38c0 .62.32 1.19.85 1.54l2.26 1.48c1.16.76 2.68.82 3.9.16z"/></svg>
+            +91 981 981 7293
+          </p>
+          <p class="contact-info">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Delhi, India
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> CoralSearch. All rights reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+  <script>
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        nav.style.background = '#fff';
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+      } else {
+        nav.style.background = '#fff';
+        nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+      }
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question')
+      .forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.parentElement;
+          const answer = item.querySelector('.faq-answer');
+          const icon = btn.querySelector('.faq-icon');
+          const isOpen = item.classList.contains('open');
+
+          document.querySelectorAll('.faq-item')
+            .forEach(i => {
+              i.classList.remove('open');
+              i.querySelector('.faq-answer')
+                .style.maxHeight = '0';
+              i.querySelector('.faq-icon')
+                .textContent = '+';
+            });
+
+          if (!isOpen) {
+            item.classList.add('open');
+            answer.style.maxHeight =
+              answer.scrollHeight + 'px';
+            icon.textContent = '×';
+          }
+        });
+      });
+
+    // Footer year
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

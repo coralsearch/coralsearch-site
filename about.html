@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | CoralSearch Executive Search</title>
+  <meta name="description" content="Learn about CoralSearch — a premier executive search firm with 20+ years of experience connecting global organizations with elite talent.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Page Hero Styles */
+    .page-hero {
+      background-color: #F4F7FB;
+      padding-top: 140px;
+      padding-bottom: 80px;
+      text-align: center;
+    }
+
+    .page-hero-breadcrumb {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 {
+      font-size: 56px;
+      font-weight: 800;
+      color: #1A2E44;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .page-hero-stats {
+      display: flex;
+      justify-content: center;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .page-hero-stats span {
+      color: #1A2E44;
+      font-weight: 600;
+    }
+
+    .page-hero-stats::before,
+    .page-hero-stats::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 14px;
+      background-color: #ccc;
+      margin: 0 15px;
+    }
+
+    .page-hero-stats::before {
+      content: none;
+    }
+
+    /* Our Story Section */
+    .our-story-section {
+      background-color: #fff;
+      padding: 80px 0;
+    }
+
+    .our-story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .our-story-visual-box {
+      background-color: #1A2E44;
+      border-radius: 24px;
+      padding: 48px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .our-story-visual-box h3 {
+      font-size: 60px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .our-story-visual-box p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .our-story-stat-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .our-story-stat-pills span {
+      background-color: #fff;
+      border: 1px solid #E8451E;
+      color: #E8451E;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+    }
+
+    .our-story-visual-box .accent-line {
+      width: 60px;
+      height: 3px;
+      background-color: #E8451E;
+      margin: 0 auto;
+    }
+
+    .our-story-text {
+      text-align: left;
+    }
+
+    .our-story-text-label {
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .our-story-text h2 {
+      font-size: 38px;
+      font-weight: 700;
+      color: #1A2E44;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .our-story-text p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    /* Our Values Section */
+    .our-values-section {
+      background-color: #F4F7FB;
+      padding: 80px 0;
+    }
+
+    .our-values-label {
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .our-values-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1A2E44;
+      margin-bottom: 40px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .our-values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .value-card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      transition: border-left 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .value-card:hover {
+      border-left: 3px solid #E8451E;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transform: translateY(-4px);
+    }
+
+    .value-card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      font-size: 40px;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .value-card-icon.coral-border {
+      border: 3px solid #E8451E;
+      color: #1A2E44;
+    }
+
+    .value-card-icon.coral-bg {
+      background-color: #E8451E;
+      color: #fff;
+    }
+
+    .value-card-icon.navy-bg {
+      background-color: #1A2E44;
+      color: #fff;
+    }
+
+    .value-card h3 {
+      font-size: 20px;
+      color: #1A2E44;
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* Why CoralSearch Section */
+    .why-coralsearch-section {
+      background-color: #fff;
+      padding: 80px 0;
+    }
+
+    .why-coralsearch-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .why-coralsearch-left {
+      text-align: left;
+    }
+
+    .why-coralsearch-left-label {
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .why-coralsearch-left h2 {
+      font-size: 38px;
+      font-weight: 700;
+      color: #1A2E44;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .why-coralsearch-left p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .why-coralsearch-right {
+      text-align: left;
+    }
+
+    .why-coralsearch-point {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .why-coralsearch-point-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #E8451E;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+    }
+
+    .why-coralsearch-point h3 {
+      font-size: 18px;
+      color: #1A2E44;
+      margin-bottom: 5px;
+    }
+
+    .why-coralsearch-point p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* Expertise Areas Section */
+    .expertise-areas-section {
+      background-color: #F4F7FB;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .expertise-areas-label {
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .expertise-areas-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1A2E44;
+      margin-bottom: 40px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .expertise-areas-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .expertise-tag {
+      background-color: #fff;
+      border: 1px solid #E8451E;
+      color: #E8451E;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .expertise-tag:hover {
+      background-color: #E8451E;
+      color: #fff;
+    }
+
+    /* Stats Banner Section */
+    .stats-banner-section {
+      background-color: #1A2E44;
+      color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .stats-banner-grid {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .stats-banner-grid > div {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    }
+
+    .stats-banner-grid > div:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .stats-banner-number {
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .stats-banner-label {
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background-color: #E8451E;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .cta-section p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .cta-section a {
+      background-color: #fff;
+      color: #E8451E;
+      padding: 14px 32px;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .cta-section a:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Footer Styles */
+    .site-footer {
+      background-color: #1A2E44;
+      color: #fff;
+      padding: 80px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .footer-col h3 {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-col a:hover {
+      color: #E8451E;
+    }
+
+    .footer-col p {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-col .contact-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .footer-col .contact-info svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      fill: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-bottom a:hover {
+      color: #E8451E;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .social-icons a {
+      margin-left: 15px;
+      color: #fff;
+      transition: color 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      color: #E8451E;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .page-hero h1 {
+        font-size: 42px;
+      }
+
+      .our-story-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .our-values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-coralsearch-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .social-icons {
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+
+    /* Utility Classes */
+    .coral-text {
+      color: #E8451E;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      Coral<span>Search</span>
+    </a>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Hire Talent</a>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero-breadcrumb">Home → About</p>
+      <h1>Your Most Trustworthy<br>Search Partners.</h1>
+      <p>For over two decades, CoralSearch has been connecting global organizations with the specialized talent they need to thrive.</p>
+      <div class="page-hero-stats">
+        <span>20+</span> Years | <span>10K+</span> Placements | <span>98%</span> Retention
+      </div>
+    </div>
+  </section>
+
+  <section class="our-story-section">
+    <div class="container">
+      <div class="our-story-grid">
+        <div class="our-story-visual-box">
+          <h3>20+</h3>
+          <p>Years of Excellence</p>
+          <div class="our-story-stat-pills">
+            <span>10K+ Placements</span>
+            <span>95% Success Rate</span>
+            <span>Global Reach</span>
+            <span>Multi-Industry</span>
+          </div>
+          <div class="accent-line"></div>
+        </div>
+        <div class="our-story-text">
+          <p class="our-story-text-label">Our Story</p>
+          <h2>We Are the Most Trustworthy<br>Search Partners for Decades.</h2>
+          <p>Coral Search is an executive search firm operating in a few specialised industry verticals. We are the most trustworthy search partners to our clients and have associations of decades with most of our clients.</p>
+          <p>We have an expertise in Talent Acquisition across all industry verticals including IT (Digital Product Management, Data Sciences/Analytics, RPA, Cloud Architecture/Development, Infrastructure, Program Management, SEO, UX/UI etc.), Finance, Strategy & Transformation, Sales & Marketing, Supply Chain, HR, R&D, Market Research, and Packaging.</p>
+          <p>Our team comes with superior background and have experience working with hiring managers, HRBPs, and global stakeholders to determine their requirements and supporting them in final decisions on candidate hiring; making recommendations on appropriate hires and being advisors to the stakeholders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-values-section">
+    <div class="container">
+      <p class="our-values-label">What Drives Us</p>
+      <h2 style="font-family: 'Poppins', sans-serif;">Our Core Values</h2>
+      <div class="our-values-grid">
+        <div class="value-card">
+          <div class="value-card-icon coral-border">01</div>
+          <h3>Integrity</h3>
+          <p>We build relationships based on complete transparency and honesty. Every engagement is handled with the highest ethical standards.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon coral-bg">02</div>
+          <h3>Excellence</h3>
+          <p>We never settle for good enough. Our rigorous search process ensures we present only the best-fit candidates for every role.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon navy-bg">03</div>
+          <h3>Partnership</h3>
+          <p>We become an extension of your team. Our decade-long client relationships are a testament to the trust we build.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-coralsearch-section">
+    <div class="container">
+      <div class="why-coralsearch-grid">
+        <div class="why-coralsearch-left">
+          <p class="why-coralsearch-left-label">Why Choose Us</p>
+          <h2 style="font-family: 'Poppins', sans-serif;">We Don't Just Fill Roles.<br>We Build Strategic Advantages.</h2>
+          <p>Our methodology combines traditional search excellence with modern market intelligence. We keep our clients ahead of the competition by providing deep insights into hiring practices and salary information.</p>
+        </div>
+        <div class="why-coralsearch-right">
+          <div class="why-coralsearch-point">
+            <div class="why-coralsearch-point-icon">01</div>
+            <div>
+              <h3>Decades of Partnership</h3>
+              <p>We build associations that last decades, becoming an extension of our clients' teams with deep understanding of their culture and needs.</p>
+            </div>
+          </div>
+          <div class="why-coralsearch-point">
+            <div class="why-coralsearch-point-icon">02</div>
+            <div>
+              <h3>Deep Industry Verticals</h3>
+              <p>Specialized expertise across all industry verticals — IT, Finance, Supply Chain, Sales, HR, and R&D functions.</p>
+            </div>
+          </div>
+          <div class="why-coralsearch-point">
+            <div class="why-coralsearch-point-icon">03</div>
+            <div>
+              <h3>Superior Team Background</h3>
+              <p>Our team brings high-level experience working with hiring managers, HRBPs, and global stakeholders worldwide.</p>
+            </div>
+          </div>
+          <div class="why-coralsearch-point">
+            <div class="why-coralsearch-point-icon">04</div>
+            <div>
+              <h3>Innovative Sourcing</h3>
+              <p>We utilize MeetUps, community organizations, and informal networks to find hidden talent others miss.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="expertise-areas-section">
+    <div class="container">
+      <p class="expertise-areas-label">What We Place</p>
+      <h2 style="font-family: 'Poppins', sans-serif;">Deep Expertise Across All Functions</h2>
+      <div class="expertise-areas-tags">
+        <span class="expertise-tag">Digital Product Management</span>
+        <span class="expertise-tag">Data Sciences & Analytics</span>
+        <span class="expertise-tag">RPA & Automation</span>
+        <span class="expertise-tag">Cloud Architecture</span>
+        <span class="expertise-tag">Infrastructure</span>
+        <span class="expertise-tag">Program Management</span>
+        <span class="expertise-tag">SEO Specialists</span>
+        <span class="expertise-tag">UX/UI Design</span>
+        <span class="expertise-tag">Finance Leadership</span>
+        <span class="expertise-tag">Strategy & Transformation</span>
+        <span class="expertise-tag">Sales & Marketing</span>
+        <span class="expertise-tag">Supply Chain</span>
+        <span class="expertise-tag">Human Resources</span>
+        <span class="expertise-tag">R&D</span>
+        <span class="expertise-tag">Market Research</span>
+        <span class="expertise-tag">Packaging</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-banner-section">
+    <div class="container">
+      <div class="stats-banner-grid">
+        <div>
+          <p class="stats-banner-number">20+</p>
+          <p class="stats-banner-label">Years of Experience</p>
+        </div>
+        <div>
+          <p class="stats-banner-number">10K+</p>
+          <p class="stats-banner-label">Successful Placements</p>
+        </div>
+        <div>
+          <p class="stats-banner-number">95%</p>
+          <p class="stats-banner-label">Placement Success Rate</p>
+        </div>
+        <div>
+          <p class="stats-banner-number">98%</p>
+          <p class="stats-banner-label">Client Retention Rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 style="font-family: 'Poppins', sans-serif;">Ready to Find Your Next Leader?</h2>
+      <p>Let's start a conversation about your talent needs.</p>
+      <a href="contact.html">Schedule a Call</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 style="color: #fff;">
+            Coral<span style="color: #E8451E;">Search</span>
+          </h3>
+          <p style="color: rgba(255, 255, 255, 0.6);">Connecting Global Vision with Elite Talent</p>
+          <div class="social-icons">
+            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m0-2H5a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4z"/><path d="M8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM12 16v-5H9v5h3zm4 0v-3c0-.53.22-.79.65-.79a.84.84 0 0 1 .73.79v3h3V9h-3v1c0-.56-.22-.79-.65-.79a.84.84 0 0 1-.73.79v5h-3z"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.664-1.485 2.033-2.53-.936.555-1.956.959-3.026 1.175-.884-.945-2.164-1.542-3.59-1.542-2.672 0-4.867 2.195-4.867 4.866 0 .38.044.746.124 1.094-4.04-203-7.625-2.135-10.034-1.06.33 578.512 1.674 2.14 4.218 4.421 2.224 4.522 4.694 5.834-1.037-.031-2.008-.317-2.783-.643 0 0 0 0 0 0 .393 4.92 1.36 6.466 3.382-1.169-.023-2.258-.429-3.234-.877.324 1.017 1.26 1.754 2.366 1.773-.957.754-2.175 1.163-3.48 1.163-.223 0-.443-.013-.662-.039 1.215.98 2.67 1.551 4.287 1.551 5.144 0 7.953-4.256 7.953-7.954 0-.121-.234-.241-.34-.367.49-.355.916-.793 1.249-1.293z"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M9.197 21.5h4v-8.01h1.797l.303-2.99h-2.1V8.5a.5.5 0 0 1 .5-.5h1.5v-2.99h-2.147A5.417 5.417 0 0 0 4.5 12.56v2.94h-2.343V21.5h4.84z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Executive Search</a></li>
+            <li><a href="#">Retained Search</a></li>
+            <li><a href="#">RPO Services</a></li>
+            <li><a href="#">Outplacement</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Get In Touch</h3>
+          <p class="contact-info">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:info@coralsearch.com">info@coralsearch.com</a>
+          </p>
+          <p class="contact-info">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.57 3.9 4.9 6.61 6.35 1.22.6 2.74.54 3.9-.16l2.26-1.48c.53-.35.85-.92.85-1.54V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v4.38c0 .62.32 1.19.85 1.54l2.26 1.48c1.16.76 2.68.82 3.9.16z"/></svg>
+            +91 981 981 7293
+          </p>
+          <p class="contact-info">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Delhi, India
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> CoralSearch. All rights reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+  <script>
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        nav.style.background = '#fff';
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+      } else {
+        nav.style.background = '#fff';
+        nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+      }
+    });
+    // Footer year
+    document.getElementById('year').textContent = 
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
